@@ -50,6 +50,11 @@ public final class SunshineDateUtils {
         return localDate + gmtOffset;
     }
 
+    public static long normalizeDate(long date) {
+        // Normalize the start date to the beginning of the (UTC) day in local time
+        long retValNew = date / DAY_IN_MILLIS * DAY_IN_MILLIS;
+        return retValNew;
+    }
 
     public static String getFriendlyDateString(Context context, long dateInMillis, boolean showFullDate) {
 

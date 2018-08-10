@@ -87,9 +87,9 @@ public final class OpenWeatherJsonUtils {
             JSONObject temperatureObject = dayForecast.getJSONObject(OWM_TEMPERATURE);
             high = temperatureObject.getDouble(OWM_MAX);
             low = temperatureObject.getDouble(OWM_MIN);
-            //highAndLow = SunshineWeatherUtils.formatHighLows(context, high, low);
+            highAndLow = SunshineWeatherUtils.formatHighLows(context, high, low);
 
-            parsedWeatherData[i] = date + " - " + description + " - ";
+            parsedWeatherData[i] = date + " - " + description + " - "+highAndLow;
         }
 
         return parsedWeatherData;

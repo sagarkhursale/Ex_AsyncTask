@@ -26,6 +26,10 @@ public class SunshinePreferences {
         return true;
     }
 
+    public static String getPreferredWeatherLocation(Context context) {
+        return getDefaultWeatherLocation();
+    }
+
     private static String getDefaultWeatherLocation() {
         return DEFAULT_WEATHER_LOCATION;
     }
